@@ -3,11 +3,11 @@ import logo from "../../assets/logo-toy.png";
 const Footer = () => {
   return (
     <footer className="container mx-auto footer items-center p-4 bg-neutral text-neutral-content mt-5 mb-5">
-      <div className="items-center grid-flow-col">
+      <div className="items-center grid-flow-col sm:flex sm:justify-center">
         <img src={logo} alt="" />
         <p>Copyright © 2023 - All right reserved</p>
       </div>
-      <div className="grid-flow-col gap-4 md:place-self-center md:justify-self-end">
+      <div className="grid-flow-col gap-4 md:place-self-center md:justify-self-end sm:justify-self-center">
         <a>
           <svg
             xmlns="http://www.w3.org/2000/svg"
