@@ -8,7 +8,7 @@ import CustomerServ from "./CustomerServ";
 
 const Home = () => {
   return (
-    <div className="container mx-auto lg:mt-16 sm:mt-36">
+    <div className="container mx-auto lg:mt-16 sm:mt-40">
       <div className="carousel w-full h-[500px]">
         <div id="slide1" className="carousel-item relative w-full  ">
           <img
@@ -59,6 +59,7 @@ const Home = () => {
       <div className="top-0">
       <Gallery></Gallery>
       </div>
+      {/* sub category section  */}
       <div>
         <SubCategory></SubCategory>
       </div>

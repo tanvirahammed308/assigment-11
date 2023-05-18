@@ -53,6 +53,14 @@ const NavBar = () => {
             >
               Add A Toy
             </NavLink>
+            <NavLink
+              to="/mytoy"
+              className={({ isActive }) =>
+                isActive ? "bg-lime-500	font-bold text-xl" : "font-bold  text-xl"
+              }
+            >
+              My Toy
+            </NavLink>
 
             <NavLink
               to="/blogs"
@@ -106,6 +114,15 @@ const NavBar = () => {
           }
         >
           Add A Toy
+        </NavLink>
+
+        <NavLink
+          to="/mytoy"
+          className={({ isActive }) =>
+            isActive ? "bg-lime-500	font-bold text-xl" : "font-bold  text-xl"
+          }
+        >
+          My Toy
         </NavLink>
 
         <NavLink
