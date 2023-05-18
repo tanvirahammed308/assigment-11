@@ -2,6 +2,7 @@ import Gallery from "./Gallery";
 import Img1 from '../../assets/img/causel1.png'
 import Img2 from '../../assets/img/carousel2.png'
 import Img3 from '../../assets/img/carousel3.png'
+import SubCategory from "./SubCategory";
 
 const Home = () => {
   return (
@@ -55,6 +56,9 @@ const Home = () => {
       {/* Gallery section  */}
       <div className="top-0">
       <Gallery></Gallery>
+      </div>
+      <div>
+        <SubCategory></SubCategory>
       </div>
     </div>
   );
