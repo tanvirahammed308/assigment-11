@@ -1,0 +1,54 @@
+[
+    {
+      "subcategory": "Remote-Controlled Cars",
+      "toys": [
+        {
+          "name": "Speedster Racer",
+          "picture": "https://example.com/speedster-racer.jpg",
+          "price": 29.99,
+          "rating": 4.5
+        },
+        {
+          "name": "Turbo Drifter",
+          "picture": "https://example.com/turbo-drifter.jpg",
+          "price": 39.99,
+          "rating": 4.2
+        }
+      ]
+    },
+    {
+      "subcategory": "Diecast Cars",
+      "toys": [
+        {
+          "name": "Classic Cruiser",
+          "picture": "https://example.com/classic-cruiser.jpg",
+          "price": 12.99,
+          "rating": 4.7
+        },
+        {
+          "name": "Retro Roadster",
+          "picture": "https://example.com/retro-roadster.jpg",
+          "price": 14.99,
+          "rating": 4.4
+        }
+      ]
+    },
+    {
+      "subcategory": "Transforming Cars",
+      "toys": [
+        {
+          "name": "Robo Racer",
+          "picture": "https://example.com/robo-racer.jpg",
+          "price": 34.99,
+          "rating": 4.6
+        },
+        {
+          "name": "Morphing Machine",
+          "picture": "https://example.com/morphing-machine.jpg",
+          "price": 49.99,
+          "rating": 4.8
+        }
+      ]
+    }
+  ]
+  

@@ -3,17 +3,19 @@ import Img1 from '../../assets/img/causel1.png'
 import Img2 from '../../assets/img/carousel2.png'
 import Img3 from '../../assets/img/carousel3.png'
 import SubCategory from "./SubCategory";
+import NewArrival from "./NewArrival";
+import CustomerServ from "./CustomerServ";
 
 const Home = () => {
   return (
     <div className="container mx-auto lg:mt-16 sm:mt-36">
-      <div className="carousel w-full">
+      <div className="carousel w-full h-[500px]">
         <div id="slide1" className="carousel-item relative w-full  ">
           <img
             src={Img1}
-            className="w-full  "
+            className="w-full rounded-lg "
           />
-          <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 lg:top-80 sm:top-40 ">
+          <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 lg:top-80 sm:top-80 ">
             <a href="#slide3" className="btn btn-circle">
               ❮
             </a>
@@ -25,9 +27,9 @@ const Home = () => {
         <div id="slide2" className="carousel-item relative w-full">
           <img
             src={Img2}
-            className="w-full"
+            className="w-full rounded-lg "
           />
-          <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 lg:top-80 sm:top-40">
+          <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 lg:top-80 sm:top-80">
             <a href="#slide1" className="btn btn-circle">
               ❮
             </a>
@@ -39,9 +41,9 @@ const Home = () => {
         <div id="slide3" className="carousel-item relative w-full">
         <img
             src={Img3}
-            className="w-full "
+            className="w-full rounded-lg "
           />
-          <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 lg:top-80 sm:top-40">
+          <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 lg:top-80 sm:top-80">
             <a href="#slide2" className="btn btn-circle">
               ❮
             </a>
@@ -59,6 +61,14 @@ const Home = () => {
       </div>
       <div>
         <SubCategory></SubCategory>
+      </div>
+      {/* new arrival  */}
+      <div>
+        <NewArrival></NewArrival>
+      </div>
+      {/* customer service  */}
+      <div>
+        <CustomerServ></CustomerServ>
       </div>
     </div>
   );
