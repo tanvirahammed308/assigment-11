@@ -1,13 +1,18 @@
+import Gallery from "./Gallery";
+import Img1 from '../../assets/img/causel1.png'
+import Img2 from '../../assets/img/carousel2.png'
+import Img3 from '../../assets/img/carousel3.png'
+
 const Home = () => {
   return (
     <div className="container mx-auto lg:mt-16 sm:mt-36">
       <div className="carousel w-full">
-        <div id="slide1" className="carousel-item relative w-full ">
+        <div id="slide1" className="carousel-item relative w-full  ">
           <img
-            src="https://images.unsplash.com/photo-1572635196184-84e35138cf62?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=580&q=80"
-            className="w-full h-2/4 "
+            src={Img1}
+            className="w-full  "
           />
-          <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 lg:top-80 sm:top-40">
+          <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 lg:top-80 sm:top-40 ">
             <a href="#slide3" className="btn btn-circle">
               ❮
             </a>
@@ -18,8 +23,8 @@ const Home = () => {
         </div>
         <div id="slide2" className="carousel-item relative w-full">
           <img
-            src="https://images.unsplash.com/photo-1594787318286-3d835c1d207f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=870&q=80"
-            className="w-full h-2/4"
+            src={Img2}
+            className="w-full"
           />
           <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 lg:top-80 sm:top-40">
             <a href="#slide1" className="btn btn-circle">
@@ -32,8 +37,8 @@ const Home = () => {
         </div>
         <div id="slide3" className="carousel-item relative w-full">
         <img
-            src="https://images.unsplash.com/photo-1598084991519-c90900bc9df0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=871&q=80"
-            className="w-full h-2/4"
+            src={Img3}
+            className="w-full "
           />
           <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 lg:top-80 sm:top-40">
             <a href="#slide2" className="btn btn-circle">
@@ -45,6 +50,11 @@ const Home = () => {
           </div>
         </div>
         
+      </div>
+      
+      {/* Gallery section  */}
+      <div className="top-0">
+      <Gallery></Gallery>
       </div>
     </div>
   );
