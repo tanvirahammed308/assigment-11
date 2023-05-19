@@ -1,6 +1,9 @@
+import { useContext } from "react";
 import { Link } from "react-router-dom";
+import { AuthContext } from "../../providers/AuthProvider";
 
 const Register = () => {
+  const {createUser}=useContext(AuthContext)
     const handleSignUp=e=>{
         e.preventDefault();
         const form=e.target;
@@ -9,6 +12,13 @@ const Register = () => {
         const photo =form.photo.value;
         const password=form.password.value;
         console.log(name,email,photo,password);
+        createUser(email,password)
+        .then(result=>{
+          const user=result.user;
+          console.log(user)
+
+        })
+        .catch(error=>console.log(error))
     }
   return (
     <div className="container mx-auto hero min-h-screen bg-base-200 sm:mt-40 lg:mt-5">
