@@ -1,57 +1,304 @@
-[
+{
+  "toys": [
     {
-      "subcategory_id": "01",
-      "subcategory": "Remote-Controlled Cars",
-      "toys": [
+      "id": 1,
+      "toy_name": "Red Racing Car",
+      "price": 19.99,
+      "seller_name": "Toy Emporium",
+      "seller_email": "toyemporium@example.com",
+      "available_quantity": 5,
+      "toy_description": "Experience the thrill of high-speed racing with this sleek red car.",
+      "subcategory": [
         {
-          "name": "Speedster Racer",
-          "picture": "https://example.com/speedster-racer.jpg",
-          "price": 29.99,
-          "rating": 4.5
-        },
-        {
-          "name": "Turbo Drifter",
-          "picture": "https://example.com/turbo-drifter.jpg",
-          "price": 39.99,
-          "rating": 4.2
+          "title": "Sports Cars",
+          "products": [
+            {
+              "picture": "red_car1.jpg",
+              "name": "Super Speed Racer",
+              "price": 24.99,
+              "rating": 4.5,
+              "description": "Unleash the speed demon within with our supercharged red racer."
+            },
+            {
+              "picture": "red_car2.jpg",
+              "name": "Turbo Blast GT",
+              "price": 29.99,
+              "rating": 4.2,
+              "description": "Dominate the race track with this turbo-charged red beast."
+            }
+          ]
         }
       ]
     },
     {
-      "subcategory_id": "02",
-      "subcategory": "Diecast Cars",
-      "toys": [
+      "id": 2,
+      "toy_name": "Monster Truck",
+      "price": 29.99,
+      "seller_name": "Playtime Paradise",
+      "seller_email": "playtimeparadise@example.com",
+      "available_quantity": 8,
+      "toy_description": "Crush the competition with this mighty monster truck.",
+      "subcategory": [
         {
-          "name": "Classic Cruiser",
-          "picture": "https://example.com/classic-cruiser.jpg",
-          "price": 12.99,
-          "rating": 4.7
-        },
-        {
-          "name": "Retro Roadster",
-          "picture": "https://example.com/retro-roadster.jpg",
-          "price": 14.99,
-          "rating": 4.4
+          "title": "Off-Road Vehicles",
+          "products": [
+            {
+              "picture": "monster_truck1.jpg",
+              "name": "Mega Crusher",
+              "price": 34.99,
+              "rating": 4.7,
+              "description": "Conquer any obstacle with our unstoppable mega crusher."
+            },
+            {
+              "picture": "monster_truck2.jpg",
+              "name": "Gigantic Goliath",
+              "price": 39.99,
+              "rating": 4.4,
+              "description": "Rule the off-road world with this gigantic and powerful monster truck."
+            }
+          ]
         }
       ]
     },
     {
-      "subcategory_id": "3",
-      "subcategory": "Transforming Cars",
-      "toys": [
+      "id": 3,
+      "toy_name": "Blue Police Car",
+      "price": 14.99,
+      "seller_name": "Kids' Corner",
+      "seller_email": "kidscorner@example.com",
+      "available_quantity": 3,
+      "toy_description": "Protect and serve with this cool blue police car.",
+      "subcategory": [
         {
-          "name": "Robo Racer",
-          "picture": "https://example.com/robo-racer.jpg",
-          "price": 34.99,
-          "rating": 4.6
-        },
+          "title": "Law Enforcement",
+          "products": [
+            {
+              "picture": "police_car1.jpg",
+              "name": "Highway Patrol",
+              "price": 19.99,
+              "rating": 4.1,
+              "description": "Enforce the law on the highway with our speedy police car."
+            },
+            {
+              "picture": "police_car2.jpg",
+              "name": "SWAT Pursuit",
+              "price": 24.99,
+              "rating": 4.6,
+              "description": "Engage in high-stakes chases with our SWAT pursuit vehicle."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "toy_name": "Yellow School Bus",
+      "price": 24.99,
+      "seller_name": "Toys 'R' Us",
+      "seller_email": "toysrus@example.com",
+      "available_quantity": 2,
+      "toy_description": "Take a ride to school with this vibrant yellow school bus.",
+      "subcategory": [
         {
-          "name": "Morphing Machine",
-          "picture": "https://example.com/morphing-machine.jpg",
-          "price": 49.99,
-          "rating": 4.8
+          "title": "School Buses",
+          "products": [
+            {
+              "picture": "school_bus1.jpg",
+              "name": "Happy Wheels",
+              "price": 29.99,
+              "rating": 4.3,
+              "description": "Make every journey a joyful one with our happy wheels school bus."
+            },
+            {
+              "picture": "school_bus2.jpg",
+              "name": "Mini Explorers",
+              "price": 34.99,
+              "rating": 4.8,
+              "description": "Embark on exciting adventures with our mini explorers school bus."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "toy_name": "Green Off-Roader",
+      "price": 17.99,
+      "seller_name": "Funland Toys",
+      "seller_email": "funlandtoys@example.com",
+      "available_quantity": 6,
+      "toy_description": "Conquer any terrain with this rugged green off-roader.",
+      "subcategory": [
+        {
+          "title": "Off-Road Vehicles",
+          "products": [
+            {
+              "picture": "off_roader1.jpg",
+              "name": "Wild Safari",
+              "price": 22.99,
+              "rating": 4.2,
+              "description": "Embark on a wild safari adventure with our off-roader."
+            },
+            {
+              "picture": "off_roader2.jpg",
+              "name": "Jungle Explorer",
+              "price": 27.99,
+              "rating": 4.6,
+              "description": "Explore the uncharted jungles with our rugged jungle explorer."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "toy_name": "Purple Convertible",
+      "price": 21.99,
+      "seller_name": "Kids' World",
+      "seller_email": "kidsworld@example.com",
+      "available_quantity": 4,
+      "toy_description": "Cruise around town in style with this sleek purple convertible.",
+      "subcategory": [
+        {
+          "title": "Sports Cars",
+          "products": [
+            {
+              "picture": "convertible1.jpg",
+              "name": "Glamour Ride",
+              "price": 26.99,
+              "rating": 4.4,
+              "description": "Experience the glamour of a luxurious ride with our convertible."
+            },
+            {
+              "picture": "convertible2.jpg",
+              "name": "Sunset Cruiser",
+              "price": 31.99,
+              "rating": 4.7,
+              "description": "Enjoy breathtaking sunsets as you cruise in our stylish convertible."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "toy_name": "Orange Sports Car",
+      "price": 27.99,
+      "seller_name": "Playland Toys",
+      "seller_email": "playlandtoys@example.com",
+      "available_quantity": 7,
+      "toy_description": "Experience the thrill of high-performance racing with this vibrant orange sports car.",
+      "subcategory": [
+        {
+          "title": "Sports Cars",
+          "products": [
+            {
+              "picture": "sports_car1.jpg",
+              "name": "Speed Demon",
+              "price": 32.99,
+              "rating": 4.6,
+              "description": "Unleash the speed demon within with our high-performance sports car."
+            },
+            {
+              "picture": "sports_car2.jpg",
+              "name": "Track Master",
+              "price": 37.99,
+              "rating": 4.3,
+              "description": "Master the race track with our agile and powerful track master sports car."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 8,
+      "toy_name": "White Ambulance",
+      "price": 18.99,
+      "seller_name": "Tiny Treasures",
+      "seller_email": "tinytreasures@example.com",
+      "available_quantity": 9,
+      "toy_description": "Be prepared for any emergency with this white ambulance toy.",
+      "subcategory": [
+        {
+          "title": "Emergency Vehicles",
+          "products": [
+            {
+              "picture": "ambulance1.jpg",
+              "name": "Emergency Medic",
+              "price": 23.99,
+              "rating": 4.3,
+              "description": "Be the hero of every emergency with our speedy emergency medic ambulance."
+            },
+            {
+              "picture": "ambulance2.jpg",
+              "name": "Rescue Ranger",
+              "price": 28.99,
+              "rating": 4.7,
+              "description": "Navigate through challenging rescue missions with our versatile rescue ranger ambulance."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 9,
+      "toy_name": "Silver Sedan",
+      "price": 16.99,
+      "seller_name": "Super Toys",
+      "seller_email": "supertoys@example.com",
+      "available_quantity": 6,
+      "toy_description": "Experience elegance and comfort with this sleek silver sedan.",
+      "subcategory": [
+        {
+          "title": "Sedans",
+          "products": [
+            {
+              "picture": "sedan1.jpg",
+              "name": "Luxury Cruise",
+              "price": 21.99,
+              "rating": 4.5,
+              "description": "Embark on a luxurious cruise with our premium silver sedan."
+            },
+            {
+              "picture": "sedan2.jpg",
+              "name": "City Explorer",
+              "price": 26.99,
+              "rating": 4.2,
+              "description": "Navigate through the city streets with our versatile and stylish city explorer sedan."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 10,
+      "toy_name": "Black SUV",
+      "price": 23.99,
+      "seller_name": "Adventure Toys",
+      "seller_email": "adventuretoys@example.com",
+      "available_quantity": 5,
+      "toy_description": "Conquer any adventure with this powerful black SUV.",
+      "subcategory": [
+        {
+          "title": "SUVs",
+          "products": [
+            {
+              "picture": "suv1.jpg",
+              "name": "Off-Road Warrior",
+              "price": 28.99,
+              "rating": 4.4,
+              "description": "Tackle rugged terrains like a true off-road warrior with our black SUV."
+            },
+            {
+              "picture": "suv2.jpg",
+              "name": "Family Explorer",
+              "price": 33.99,
+              "rating": 4.6,
+              "description": "Embark on unforgettable family adventures with our spacious and comfortable family explorer SUV."
+            }
+          ]
         }
       ]
     }
   ]
-  
+}

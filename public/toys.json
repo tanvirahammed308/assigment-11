@@ -1,0 +1,100 @@
+
+ [
+      {
+        "id": 1,
+        "toy_name": "Red Racing Car",
+        "price": 19.99,
+        "seller_name": "Toy Emporium",
+        "seller_email": "toyemporium@example.com",
+        "available_quantity": 5,
+        "toy_description": "Experience the thrill of high-speed racing with this sleek red car.",
+        "subcategory": [
+          {
+            "title": "Sports Cars",
+            "products": [
+              {
+                "picture": "https://images.unsplash.com/photo-1595641416278-c4469e0a22d8?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=870&q=80",
+                "name": "Super Speed Racer",
+                "price": 24.99,
+                "rating": 4.5,
+                "description": "Unleash the speed demon within with our supercharged red racer."
+              },
+              {
+                "picture": "https://images.unsplash.com/photo-1578652520385-c05f6f3b5de3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=870&q=80",
+                "name": "Turbo Blast GT",
+                "price": 29.99,
+                "rating": 4.2,
+                "description": "Dominate the race track with this turbo-charged red beast."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": 2,
+        "toy_name": "Monster Truck",
+        "price": 29.99,
+        "seller_name": "Playtime Paradise",
+        "seller_email": "playtimeparadise@example.com",
+        "available_quantity": 8,
+        "toy_description": "Crush the competition with this mighty monster truck.",
+        "subcategory": [
+          {
+            "title": "Off-Road Vehicles",
+            "products": [
+              {
+                "picture": "https://images.unsplash.com/photo-1558563763-9157dc01afbc?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=870&q=80",
+                "name": "Mega Crusher",
+                "price": 34.99,
+                "rating": 4.7,
+                "description": "Conquer any obstacle with our unstoppable mega crusher."
+              },
+              {
+                "picture": "https://images.unsplash.com/photo-1584641911111-4fee26b4cc8d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=870&q=80",
+                "name": "Gigantic Goliath",
+                "price": 39.99,
+                "rating": 4.4,
+                "description": "Rule the off-road world with this gigantic and powerful monster truck."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": 3,
+        "toy_name": "Blue Police Car",
+        "price": 14.99,
+        "seller_name": "Kids' Corner",
+        "seller_email": "kidscorner@example.com",
+        "available_quantity": 3,
+        "toy_description": "Protect and serve with this cool blue police car.",
+        "subcategory": [
+          {
+            "title": "SUVs",
+            "products": [
+              {
+                "picture": "https://images.unsplash.com/photo-1616249174485-e60ac0145f04?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=512&q=80",
+                "name": "Highway Patrol",
+                "price": 19.99,
+                "rating": 4.1,
+                "description": "Enforce the law on the highway with our speedy police car."
+              },
+              {
+                "picture": "https://images.unsplash.com/photo-1594789761629-c240854f8c2a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=909&q=80",
+                "name": "SWAT Pursuit",
+                "price": 24.99,
+                "rating": 4.6,
+                "description": "Engage in high-stakes chases with our SWAT pursuit vehicle."
+              }
+            ]
+          }
+        ]
+      }
+      
+     
+      
+      
+      
+    ]
+  
+  

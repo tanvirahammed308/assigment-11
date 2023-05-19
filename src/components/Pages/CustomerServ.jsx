@@ -5,7 +5,7 @@ const CustomerServ = () => {
         Our Customer Support
       </h1>
       <div className="lg:flex gap-5">
-        <div className="card lg:w-96 sm:w-full bg-base-100 shadow-xl ">
+        <div className="card lg:w-96 sm:w-full sm:mt-5  bg-base-100 shadow-xl ">
           <div className="card-body">
             <h2 className="card-title">Free home delivery</h2>
             <p>Provide free home delivery for all product over $100</p>

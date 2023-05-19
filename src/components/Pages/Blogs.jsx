@@ -2,7 +2,7 @@
 
 const Blogs = () => {
     return (
-        <div className="container mx-auto lg:mt-16 sm:mt-36">
+        <div className="container mx-auto lg:mt-16 sm:mt-40">
             <div className="drop-shadow-lg border-solid border-2 border-indigo-600 p-10">
                 <p className="font-bold text-2xl">1.What is an access token and refresh token? How do they work and where should we store them on the client-side?</p>
                 <p className="mt-5 text-xl">Ans.The access token is re-issued, provided the refresh token is a valid one requesting permission to access confidential resources.A refresh token just helps  re-validate a user without them having to re-enter their login credentials multiple times.Access token and refresh token should not be stored in the local/session storage, because they are not a place for any sensitive data.it should be stored  in a httpOnly</p>
