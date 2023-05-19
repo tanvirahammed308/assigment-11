@@ -2,7 +2,13 @@ import { Link } from "react-router-dom";
 
 const Register = () => {
     const handleSignUp=e=>{
-        e.preventDefault()
+        e.preventDefault();
+        const form=e.target;
+        const name=form.name.value;
+        const email=form.email.value;
+        const photo =form.photo.value;
+        const password=form.password.value;
+        console.log(name,email,photo,password);
     }
   return (
     <div className="container mx-auto hero min-h-screen bg-base-200 sm:mt-40 lg:mt-5">
