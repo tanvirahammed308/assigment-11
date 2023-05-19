@@ -1,5 +1,5 @@
-{
-  "toys": [
+
+   [
     {
       "id": 1,
       "toy_name": "Red Racing Car",
@@ -301,4 +301,4 @@
       ]
     }
   ]
-}
+

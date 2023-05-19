@@ -11,7 +11,7 @@ import "react-tabs/style/react-tabs.css";
 const Home = () => {
   const [toys, setToys] = useState([]);
   useState(() => {
-    fetch("toys.json")
+    fetch("http://localhost:5000/toys")
       .then((res) => res.json())
       .then((data) => {
         setToys(data);

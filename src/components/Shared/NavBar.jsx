@@ -1,6 +1,14 @@
 import { NavLink } from "react-router-dom";
 import logo from '../../assets/logo-toy.png'
+import { useContext } from "react";
+import { AuthContext } from "../../providers/AuthProvider";
 const NavBar = () => {
+  const{user,logOut}=useContext(AuthContext)
+  const handleLogOut=()=>{
+    logOut()
+    .then(()=>{})
+    .catch(error=>{console.log(error)})
+  }
   return (
     <div className="container mx-auto navbar bg-base-100 lg:flex justify-between">
       <div className="lg:hidden navbar-start">
@@ -53,14 +61,7 @@ const NavBar = () => {
             >
               Add A Toy
             </NavLink>
-            <NavLink
-              to="/mytoy"
-              className={({ isActive }) =>
-                isActive ? "bg-lime-500	font-bold text-xl" : "font-bold  text-xl"
-              }
-            >
-              My Toy
-            </NavLink>
+            
 
             <NavLink
               to="/blogs"
@@ -71,6 +72,30 @@ const NavBar = () => {
               Blogs
             </NavLink>
 
+           {user?.email?
+           
+           <>
+           <NavLink
+           to="/mytoy"
+           className={({ isActive }) =>
+             isActive ? "bg-lime-500	font-bold text-xl" : "font-bold  text-xl"
+           }
+         >
+           My Toy
+         </NavLink>
+           <NavLink
+             onClick={handleLogOut}
+              className={({ isActive }) =>
+                isActive
+                  ? "bg-lime-500 font-bold text-xl	"
+                  : "font-bold  text-xl"
+              }
+            >
+              Log Out
+            </NavLink>
+           
+           </>
+            :
             <NavLink
               to="/login"
               className={({ isActive }) =>
@@ -79,8 +104,8 @@ const NavBar = () => {
                   : "font-bold  text-xl"
               }
             >
-              Login
-            </NavLink>
+              LogIn
+            </NavLink>}
           </ul>
         </div>
       </div>
@@ -116,15 +141,7 @@ const NavBar = () => {
           Add A Toy
         </NavLink>
 
-        <NavLink
-          to="/mytoy"
-          className={({ isActive }) =>
-            isActive ? "bg-lime-500	font-bold text-xl" : "font-bold  text-xl"
-          }
-        >
-          My Toy
-        </NavLink>
-
+       
         <NavLink
           to="/blogs"
           className={({ isActive }) =>
@@ -134,14 +151,36 @@ const NavBar = () => {
           Blogs
         </NavLink>
 
-        <NavLink
+        {user?.email?
+        <>
+           <NavLink
+           to="/mytoy"
+           className={({ isActive }) =>
+             isActive ? "bg-lime-500	font-bold text-xl" : "font-bold  text-xl"
+           }
+         >
+           My Toy
+         </NavLink>
+           <NavLink
+             onClick={handleLogOut}
+              className={({ isActive }) =>
+                isActive
+                  ? "bg-lime-500 font-bold text-xl	"
+                  : "font-bold  text-xl"
+              }
+            >
+              Log Out
+            </NavLink>
+           
+           </>
+        :<NavLink
           to="/login"
           className={({ isActive }) =>
             isActive ? "bg-lime-500 font-bold text-xl	" : "font-bold  text-xl"
           }
         >
           Login
-        </NavLink>
+        </NavLink>}
       </div>
     </div>
   );
