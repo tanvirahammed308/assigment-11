@@ -8,7 +8,11 @@ import CustomerServ from "./CustomerServ";
 import { useState } from "react";
 import { Tab, Tabs, TabList, TabPanel } from "react-tabs";
 import "react-tabs/style/react-tabs.css";
+import { Link,  } from "react-router-dom";
 const Home = () => {
+  
+  
+  
   const [toys, setToys] = useState([]);
   useState(() => {
     fetch("http://localhost:5000/toys")
@@ -17,6 +21,7 @@ const Home = () => {
         setToys(data);
       });
   }, []);
+  // console.log(toys);
   return (
     <div className="container mx-auto lg:mt-16 sm:mt-40">
       <div className="carousel w-full h-[500px]">
@@ -85,7 +90,10 @@ const Home = () => {
                     <p>Price : {toy.subcategory[0].products[0].price}</p>
                     <p>Rating : {toy.subcategory[0].products[0].rating}</p>
                     <div className="card-actions justify-center">
+                      <Link  to={`carddetails/${toy?._id}`}>
+                     
                       <button className="btn btn-primary">View Details</button>
+                      </Link>
                     </div>
                   </div>
                 </div>
@@ -102,7 +110,11 @@ const Home = () => {
                     <p>Price : {toy.subcategory[0].products[1].price}</p>
                     <p>Rating : {toy.subcategory[0].products[1].rating}</p>
                     <div className="card-actions justify-center">
+                      <Link to={`carddetails/${toy._id}`}>
+                      
+                      
                       <button className="btn btn-primary">View Details</button>
+                      </Link>
                     </div>
                   </div>
                 </div>

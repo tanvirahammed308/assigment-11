@@ -53,14 +53,6 @@ const NavBar = () => {
               All Toys
             </NavLink>
 
-            <NavLink
-              to="/addatoy"
-              className={({ isActive }) =>
-                isActive ? "bg-lime-500	font-bold text-xl" : "font-bold  text-xl"
-              }
-            >
-              Add A Toy
-            </NavLink>
             
 
             <NavLink
@@ -83,6 +75,15 @@ const NavBar = () => {
          >
            My Toy
          </NavLink>
+         
+         <NavLink
+              to="/addatoy"
+              className={({ isActive }) =>
+                isActive ? "bg-lime-500	font-bold text-xl" : "font-bold  text-xl"
+              }
+            >
+              Add A Toy
+            </NavLink>
            <NavLink
              onClick={handleLogOut}
               className={({ isActive }) =>
@@ -132,14 +133,7 @@ const NavBar = () => {
           All Toys
         </NavLink>
 
-        <NavLink
-          to="/addatoy"
-          className={({ isActive }) =>
-            isActive ? "bg-lime-500	font-bold text-xl" : "font-bold  text-xl"
-          }
-        >
-          Add A Toy
-        </NavLink>
+        
 
        
         <NavLink
@@ -161,6 +155,14 @@ const NavBar = () => {
          >
            My Toy
          </NavLink>
+         <NavLink
+          to="/addatoy"
+          className={({ isActive }) =>
+            isActive ? "bg-lime-500	font-bold text-xl" : "font-bold  text-xl"
+          }
+        >
+          Add A Toy
+        </NavLink>
            <NavLink
              onClick={handleLogOut}
               className={({ isActive }) =>
