@@ -1,6 +1,8 @@
 // eslint-disable-next-line react/prop-types
-const MyToyRow = ({ myToy }) => {
+const MyToyRow = ({ myToy,handleDelete }) => {
+    
   const {
+    _id,
     sellerName,
     email,
     name,
@@ -13,7 +15,7 @@ const MyToyRow = ({ myToy }) => {
   return (
     <tr>
       <th>
-        <button className="btn btn-circle btn-sm">
+        <button onClick={()=>handleDelete(_id)}   className="btn btn-circle btn-sm">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             className="h-6 w-6"
@@ -48,6 +50,7 @@ const MyToyRow = ({ myToy }) => {
       <td>{rating}</td>
       <td>{quantity}</td>
       <td>{subCategory}</td>
+      
       <th>
         <button className="btn btn-ghost btn-xs">details</button>
       </th>
@@ -56,3 +59,4 @@ const MyToyRow = ({ myToy }) => {
 };
 
 export default MyToyRow;
+// deletedCount

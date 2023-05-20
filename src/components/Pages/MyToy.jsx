@@ -11,6 +11,23 @@ const MyToy = () => {
       .then((res) => res.json())
       .then((data) => setMyToys(data));
   }, [url]);
+  const handleDelete=id=>{
+    const proceed=confirm('Are You Sure')
+    if (proceed) {
+        fetch(`http://localhost:5000/myToys/${id}`,{
+            method:"DELETE"
+        })
+        .then(res=>res.json())
+        .then(data=>{console.log(data);
+        if (data.deletedCount>0) {
+            alert('deleted successul');
+            const remaining=myToys.filter(myToy=>myToy._id !== id);
+            setMyToys(remaining)
+        }
+        
+        })
+    }
+}
 
   return (
     <div className="container mx-auto lg:mt-16 sm:mt-40">
@@ -19,11 +36,11 @@ const MyToy = () => {
     {/* head */}
     <thead>
       <tr>
-        {/* <th>
+        <th>
           <label>
-            <input type="checkbox" className="checkbox" />
+          
           </label>
-        </th> */}
+        </th> 
         <th>Name</th>
         <th>Seller Name</th>
         <th>Email</th>
@@ -31,16 +48,18 @@ const MyToy = () => {
         <th>Rating</th>
         <th>Quantity</th>
         <th>SubCategory</th>
+        
       </tr>
+      
     </thead>
     <tbody>
      
       
-   {myToys.map(myToy=><MyToyRow key={myToy._id} myToy={myToy} ></MyToyRow>)}
+   {myToys.map(myToy=><MyToyRow key={myToy._id} myToy={myToy} handleDelete={handleDelete} ></MyToyRow>)}
      
      
     </tbody>
-   
+    
     
   </table>
 </div>
