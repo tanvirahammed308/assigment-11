@@ -3,7 +3,7 @@ import { Link, useLocation, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../providers/AuthProvider";
 
 const Login = () => {
-  const{signIn}=useContext(AuthContext);
+  const{signIn,googleSignIn}=useContext(AuthContext);
   const navigate = useNavigate();
   const location=useLocation();
   const from = location.state?.from?.pathname || "/";
@@ -24,6 +24,11 @@ const Login = () => {
         })
         .catch(error=>console.log(error))
     }
+    const handleGoogleSignIn = () => {
+      googleSignIn().then(() => {
+        navigate(from);
+      });
+    };
   return (
     <div className="container mx-auto hero min-h-screen bg-base-200 sm:mt-40 lg:mt-5">
       <div className="hero-content flex-col lg:flex-row-reverse">
@@ -64,13 +69,24 @@ const Login = () => {
             <div className="form-control mt-6">
              
               <input className="btn btn-primary" type="submit" value="Login" />
+              
             </div>
-            <small><p>New TO Toy Garden <Link to="/register"><span className="text-sky-600">Sign Up</span></Link>  </p></small>
+            <div className="form-control mt-6">
+            <input  onClick={handleGoogleSignIn} className="btn btn-primary" type="submit" value=" Login With Google" />
+            </div>
+           
+            <div className="text-center mt-2">
+       
+       
+
+        <small><p>New TO Toy Garden <Link to="/register"><span className="text-sky-600">Sign Up</span></Link>  </p></small>
+      </div>
           </div>
          
         </div>
 
        </form>
+       
        
       </div>
     </div>
