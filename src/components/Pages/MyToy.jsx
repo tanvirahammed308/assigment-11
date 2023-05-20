@@ -20,7 +20,24 @@ const MyToy = () => {
         .then(res=>res.json())
         .then(data=>{console.log(data);
         if (data.deletedCount>0) {
-            alert('deleted successul');
+            // alert('deleted successul');
+            Swal.fire({
+              title: 'Are you sure?',
+              text: "You won't be able to revert this!",
+              icon: 'warning',
+              showCancelButton: true,
+              confirmButtonColor: '#3085d6',
+              cancelButtonColor: '#d33',
+              confirmButtonText: 'Yes, delete it!'
+            }).then((result) => {
+              if (result.isConfirmed) {
+                Swal.fire(
+                  'Deleted!',
+                  'Your file has been deleted.',
+                  'success'
+                )
+              }
+            })
             const remaining=myToys.filter(myToy=>myToy._id !== id);
             setMyToys(remaining)
         }

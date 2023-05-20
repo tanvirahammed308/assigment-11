@@ -1,7 +1,7 @@
 
 const AllToyRow = ({myToy}) => {
     const {
-        _id,
+        
         sellerName,
         email,
         name,

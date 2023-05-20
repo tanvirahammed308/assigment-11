@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 // eslint-disable-next-line react/prop-types
 const MyToyRow = ({ myToy,handleDelete }) => {
     
@@ -52,7 +54,10 @@ const MyToyRow = ({ myToy,handleDelete }) => {
       <td>{subCategory}</td>
       
       <th>
-        <button className="btn btn-ghost btn-xs">details</button>
+        <Link to='/updatemytoy'>
+        
+        <button className="btn btn-ghost btn-xs" >Update</button>
+        </Link>
       </th>
     </tr>
   );

@@ -1,58 +1,75 @@
 import { useContext } from "react";
 import { AuthContext } from "../../providers/AuthProvider";
-const AddAToy = () => {
-  const { user } = useContext(AuthContext);
-  const handleAddAToy = (e) => {
-    e.preventDefault();
-    const form = e.target;
-    const name = form.name.value;
-    const sellerName =form.seller.value;
-    const email = user?.email;
-    const subCategory = form.category.value;
-    const price = form.price.value;
-    const rating = form.rating.value;
-    const quantity = form.quantity.value;
-    const photo = form.photo.value;
-    const description=form.description.value;
-    const add = {
-      name,
-      sellerName,
-      email,
-      subCategory,
-      price,
-      rating,
-      quantity,
-      photo,
-      description,
-    };
-    console.log(add);
-    fetch("http://localhost:5000/myToys",{
-      method:"POST",
-      headers:{
-        "content-type":"application/json"
-      },
-      body:JSON.stringify(add)
-    }).then(res=>res.json()).then(data=>{
-      console.log(data);
-      if (data.insertedId) {
-        alert('added to my toy')
-        
-      }
-    })
-  };
-  return (
-    <div className="container mx-auto sm:mt-40 lg:mt-5    shadow-2xl bg-base-100">
-      <form onSubmit={handleAddAToy}>
+import { useLoaderData } from "react-router-dom";
+
+const UpdateMyToy = () => {
+    // const toy=useLoaderData();
+    // const{
+    //     _id,
+    //     name,
+    //     sellerName,
+       
+    //     subCategory,
+    //     price,
+    //     rating,
+    //     quantity,
+    //     photo,
+    // description}=toy
+    const { user } = useContext(AuthContext);
+    const handleUpdateToy = (e) => {
+        e.preventDefault();
+        const form = e.target;
+        const name = form.name.value;
+        const sellerName =form.seller.value;
+        const email = user?.email;
+        const subCategory = form.category.value;
+        const price = form.price.value;
+        const rating = form.rating.value;
+        const quantity = form.quantity.value;
+        const photo = form.photo.value;
+        const description=form.description.value;
+        const update = {
+          name,
+          sellerName,
+          email,
+          subCategory,
+          price,
+          rating,
+          quantity,
+          photo,
+          description
+        };
+        console.log(update);
+        fetch(`http://localhost:5000/myToys/${_id}`,{
+          method:"PUT",
+          headers:{
+            "content-type":"application/json"
+          },
+          body:JSON.stringify(update)
+        }).then(res=>res.json()).then(data=>{
+          console.log(data);
+          if (data.insertedId) {
+            alert('update')
+            
+          }
+        })
+      };
+    return (
+        <div className="container mx-auto sm:mt-40 lg:mt-5    shadow-2xl bg-base-100">
+      <form onSubmit={handleUpdateToy}>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           <div className="form-control">
             <label className="label">
               <span className="label-text">Name</span>
             </label>
             <input
+            // defaultValue={name}
               name="name"
+             
               type="text"
               placeholder="name"
               className="input input-bordered"
+              
             />
           </div>
           <div className="form-control">
@@ -60,7 +77,9 @@ const AddAToy = () => {
               <span className="label-text">Seller Name</span>
             </label>
             <input
+            //   defaultValue={sellerName}
               name="seller"
+             
               type="text"
               placeholder="seller name"
               className="input input-bordered"
@@ -72,6 +91,7 @@ const AddAToy = () => {
               <span className="label-text">Seller Email</span>
             </label>
             <input
+             
               name="email"
               type="email"
               placeholder="email"
@@ -84,6 +104,7 @@ const AddAToy = () => {
               <span className="label-text">Sub-category </span>
             </label>
             <input
+            //  defaultValue={subCategory}
               name="category"
               type="text"
               placeholder="Sub-category "
@@ -95,6 +116,7 @@ const AddAToy = () => {
               <span className="label-text">Price</span>
             </label>
             <input
+            //  defaultValue={price}
               name="price"
               type="text"
               placeholder="Price"
@@ -106,6 +128,7 @@ const AddAToy = () => {
               <span className="label-text">Rating</span>
             </label>
             <input
+            // defaultValue={rating}
               name="rating"
               type="text"
               placeholder="Rating"
@@ -117,6 +140,7 @@ const AddAToy = () => {
               <span className="label-text">Available quantity</span>
             </label>
             <input
+        //    defaultValue={quantity}
               name="quantity"
               type="text"
               placeholder="Available quantity
@@ -129,6 +153,7 @@ const AddAToy = () => {
               <span className="label-text">Detail description</span>
             </label>
             <input
+            // defaultValue={description}
               name="description"
               type="text"
               placeholder="Detail description
@@ -141,6 +166,7 @@ const AddAToy = () => {
               <span className="label-text">Picture URL</span>
             </label>
             <input
+        //    defaultValue={photo}
               name="photo"
               type="text"
               placeholder="Picture URL
@@ -152,13 +178,13 @@ const AddAToy = () => {
         <div className="form-control mt-6">
           <input
             type="submit"
-            value="Add To My Toy"
+            value="Update "
             className="btn btn-primary btn-block"
           />
         </div>
       </form>
     </div>
-  );
+    );
 };
 
-export default AddAToy;
+export default UpdateMyToy;
