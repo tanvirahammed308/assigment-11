@@ -6,7 +6,7 @@ const AddAToy = () => {
     e.preventDefault();
     const form = e.target;
     const name = form.name.value;
-    const sellerName = user?.displayName;
+    const sellerName =form.seller.value;
     const email = user?.email;
     const subCategory = form.category.value;
     const price = form.price.value;
@@ -62,7 +62,7 @@ const AddAToy = () => {
               type="text"
               placeholder="seller name"
               className="input input-bordered"
-              defaultValue={user?.displayName}
+              // defaultValue={user?.displayName}
             />
           </div>
           <div className="form-control">
