@@ -1,7 +1,12 @@
 import { useContext } from "react";
 import { AuthContext } from "../../providers/AuthProvider";
+import Swal from "sweetalert2";
+import {  useLocation, useNavigate } from "react-router-dom";
 const AddAToy = () => {
   const { user } = useContext(AuthContext);
+  const navigate = useNavigate();
+  const location=useLocation();
+  const from = location.state?.from?.pathname || "/mytoy";
   const handleAddAToy = (e) => {
     e.preventDefault();
     const form = e.target;
@@ -34,8 +39,15 @@ const AddAToy = () => {
       body:JSON.stringify(add)
     }).then(res=>res.json()).then(data=>{
       console.log(data);
+      navigate(from);
       if (data.insertedId) {
-        alert('added to my toy')
+        Swal.fire({
+          position: 'top-end',
+          icon: 'success',
+          title: 'Added To My Toy',
+          showConfirmButton: false,
+          timer: 1500
+        })
         
       }
     })
@@ -150,11 +162,14 @@ const AddAToy = () => {
           </div>
         </div>
         <div className="form-control mt-6">
+         
+          
           <input
             type="submit"
             value="Add To My Toy"
             className="btn btn-primary btn-block"
           />
+        
         </div>
       </form>
     </div>

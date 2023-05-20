@@ -1,20 +1,24 @@
 import { useContext } from "react";
 import { AuthContext } from "../../providers/AuthProvider";
-import { useLoaderData } from "react-router-dom";
+import { useLoaderData, useLocation, useNavigate } from "react-router-dom";
+import Swal from "sweetalert2";
 
 const UpdateMyToy = () => {
-    // const toy=useLoaderData();
-    // const{
-    //     _id,
-    //     name,
-    //     sellerName,
+    const toy=useLoaderData();
+    const navigate = useNavigate();
+    const location=useLocation();
+    const from = location.state?.from?.pathname || "/mytoy";
+    const{
+        _id,
+        name,
+        sellerName,
        
-    //     subCategory,
-    //     price,
-    //     rating,
-    //     quantity,
-    //     photo,
-    // description}=toy
+        subCategory,
+        price,
+        rating,
+        quantity,
+        photo,
+    description}=toy
     const { user } = useContext(AuthContext);
     const handleUpdateToy = (e) => {
         e.preventDefault();
@@ -48,14 +52,22 @@ const UpdateMyToy = () => {
           body:JSON.stringify(update)
         }).then(res=>res.json()).then(data=>{
           console.log(data);
-          if (data.insertedId) {
-            alert('update')
+          navigate(from);
+          if (data.modifiedCount) {
+            Swal.fire({
+                position: 'top-end',
+                icon: 'success',
+                title: 'Added To My Toy',
+                showConfirmButton: false,
+                timer: 1500
+              })
             
           }
         })
       };
     return (
         <div className="container mx-auto sm:mt-40 lg:mt-5    shadow-2xl bg-base-100">
+            <h1>this upadate</h1>
       <form onSubmit={handleUpdateToy}>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           <div className="form-control">
@@ -63,7 +75,7 @@ const UpdateMyToy = () => {
               <span className="label-text">Name</span>
             </label>
             <input
-            // defaultValue={name}
+            defaultValue={name}
               name="name"
              
               type="text"
@@ -77,13 +89,13 @@ const UpdateMyToy = () => {
               <span className="label-text">Seller Name</span>
             </label>
             <input
-            //   defaultValue={sellerName}
+              defaultValue={sellerName}
               name="seller"
              
               type="text"
               placeholder="seller name"
               className="input input-bordered"
-              // defaultValue={user?.displayName}
+            //   defaultValue={user?.displayName}
             />
           </div>
           <div className="form-control">
@@ -104,7 +116,7 @@ const UpdateMyToy = () => {
               <span className="label-text">Sub-category </span>
             </label>
             <input
-            //  defaultValue={subCategory}
+             defaultValue={subCategory}
               name="category"
               type="text"
               placeholder="Sub-category "
@@ -116,7 +128,7 @@ const UpdateMyToy = () => {
               <span className="label-text">Price</span>
             </label>
             <input
-            //  defaultValue={price}
+             defaultValue={price}
               name="price"
               type="text"
               placeholder="Price"
@@ -128,7 +140,7 @@ const UpdateMyToy = () => {
               <span className="label-text">Rating</span>
             </label>
             <input
-            // defaultValue={rating}
+            defaultValue={rating}
               name="rating"
               type="text"
               placeholder="Rating"
@@ -140,7 +152,7 @@ const UpdateMyToy = () => {
               <span className="label-text">Available quantity</span>
             </label>
             <input
-        //    defaultValue={quantity}
+           defaultValue={quantity}
               name="quantity"
               type="text"
               placeholder="Available quantity
@@ -153,7 +165,7 @@ const UpdateMyToy = () => {
               <span className="label-text">Detail description</span>
             </label>
             <input
-            // defaultValue={description}
+            defaultValue={description}
               name="description"
               type="text"
               placeholder="Detail description
@@ -166,7 +178,7 @@ const UpdateMyToy = () => {
               <span className="label-text">Picture URL</span>
             </label>
             <input
-        //    defaultValue={photo}
+           defaultValue={photo}
               name="photo"
               type="text"
               placeholder="Picture URL

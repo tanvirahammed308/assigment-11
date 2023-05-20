@@ -34,9 +34,7 @@ const AllToyRow = ({myToy}) => {
         <td>{rating}</td>
         <td>{quantity}</td>
         <td>{subCategory}</td>
-        <th>
-          <button className="btn btn-ghost btn-xs">details</button>
-        </th>
+        
       </tr>
     );
   };

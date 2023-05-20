@@ -1,6 +1,7 @@
 import { useContext, useEffect, useState } from "react";
 import { AuthContext } from "../../providers/AuthProvider";
 import MyToyRow from "./MyToyRow";
+import Swal from "sweetalert2";
 
 const MyToy = () => {
   const { user } = useContext(AuthContext);
@@ -12,8 +13,21 @@ const MyToy = () => {
       .then((data) => setMyToys(data));
   }, [url]);
   const handleDelete=id=>{
-    const proceed=confirm('Are You Sure')
-    if (proceed) {
+    Swal.fire({
+      title: 'Are you sure?',
+      text: "You won't be able to revert this!",
+      icon: 'warning',
+      showCancelButton: true,
+      confirmButtonColor: '#3085d6',
+      cancelButtonColor: '#d33',
+      confirmButtonText: 'Yes, delete it!'
+    }).then((result) => {
+      if (result.isConfirmed) {
+        // Swal.fire(
+        //   'Deleted!',
+        //   'Your file has been deleted.',
+        //   'success'
+        // )
         fetch(`http://localhost:5000/myToys/${id}`,{
             method:"DELETE"
         })
@@ -21,29 +35,31 @@ const MyToy = () => {
         .then(data=>{console.log(data);
         if (data.deletedCount>0) {
             // alert('deleted successul');
-            Swal.fire({
-              title: 'Are you sure?',
-              text: "You won't be able to revert this!",
-              icon: 'warning',
-              showCancelButton: true,
-              confirmButtonColor: '#3085d6',
-              cancelButtonColor: '#d33',
-              confirmButtonText: 'Yes, delete it!'
-            }).then((result) => {
-              if (result.isConfirmed) {
-                Swal.fire(
-                  'Deleted!',
-                  'Your file has been deleted.',
-                  'success'
-                )
-              }
-            })
+            
             const remaining=myToys.filter(myToy=>myToy._id !== id);
             setMyToys(remaining)
         }
         
         })
-    }
+        
+      }
+    })
+    // const proceed=confirm('Are You Sure')
+    // if (proceed) {
+    //     fetch(`http://localhost:5000/myToys/${id}`,{
+    //         method:"DELETE"
+    //     })
+    //     .then(res=>res.json())
+    //     .then(data=>{console.log(data);
+    //     if (data.deletedCount>0) {
+    //         // alert('deleted successul');
+            
+    //         const remaining=myToys.filter(myToy=>myToy._id !== id);
+    //         setMyToys(remaining)
+    //     }
+        
+    //     })
+    // }
 }
 
   return (

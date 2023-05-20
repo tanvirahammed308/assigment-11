@@ -54,9 +54,9 @@ const MyToyRow = ({ myToy,handleDelete }) => {
       <td>{subCategory}</td>
       
       <th>
-        <Link to='/updatemytoy'>
+        <Link to={`/updatemytoy/${_id}`}>
         
-        <button className="btn btn-ghost btn-xs" >Update</button>
+        <button className=" btn btn-outline btn-primary btn-xs" >Update</button>
         </Link>
       </th>
     </tr>
